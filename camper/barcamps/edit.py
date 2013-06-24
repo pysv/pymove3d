@@ -103,15 +103,20 @@ class EditView(BaseHandler):
                     f['location']['lng'] = result['lon']
             self.barcamp.update(f)
             self.barcamp.put()
+<<<<<<< HEAD
             self.flash("Thema aktualisiert", category="info")
             return redirect(self.url_for("barcamp", slug = self.barcamp.slug))
+=======
+            self.flash("Barcamp aktualisiert", category="info")
+            return redirect(self.url_for("barcamps.index", slug = self.barcamp.slug))
+>>>>>>> d95ac596cf2f09a7863c9ebdc503bbb8ce673602
         return self.render(form = form)
     post = get
 
 class ParticipantsEditView(BaseHandler):
     """let the user increase the number of participants"""
 
-    template = "barcamp/participants_edit.html"
+    template = "participants_edit.html"
 
     @ensure_barcamp()
     @logged_in()
@@ -126,6 +131,6 @@ class ParticipantsEditView(BaseHandler):
             self.barcamp.size = size
             self.barcamp.put()
             self.flash("Thema aktualisiert", category="info")
-            return redirect(self.url_for("barcamp", slug = self.barcamp.slug))
+            return redirect(self.url_for("barcamps.index", slug = self.barcamp.slug))
         return self.render(form = form, barcamp = self.barcamp)
     post = get
