@@ -2,8 +2,9 @@
 
 {% block content %}
     <h1 id="logo">
-        <img src="{{url_for("static", filename="/img/camperfull.png")}}" alt="Camper - logo">
+        <img src="{{url_for("static", filename="/img/pymove3d.png")}}" alt="pymove3d - logo">
     </h1>
+    <b>Plane</b> und <b>Organisiere</b> Wettbewerbe oder Kurse rund um die Programmiersprache <a href="http://python.org"><b>Python<b></a>.
     <div class="row">
         <div class="span9">
         {% for view in barcamps %}
@@ -37,12 +38,12 @@
             {% if logged_in %}
                 <div class="widget">
                     <p>
-                        <strong>Willst Du ein Barcamp organisieren?</strong>
+                        <strong>Willst Du ein Python-Tutorial zu dem Python-Wettbewerb organisieren?</strong>
                     </p>
                     <p>
                         Mit diesem Tool ist es ganz einfach! 
                     </p>
-                    <a href="{{url_for("barcamps.add")}}" id="create-new-barcamp-button" class="btn">{{_('create new barcamp')}}</a>
+                    <a href="{{url_for("barcamps.add")}}" id="create-new-barcamp-button" class="btn">{{_('create new ')}}</a>
                 </div>
             {% endif %}
         </div>
@@ -51,6 +52,7 @@
     <hr class="thick">
 
     <div class="footer row">
+    	{#
         <div class="span12 logo-footer">
             <div class="pull-right">
                 <h5>gefördert vom</h5>
@@ -62,6 +64,7 @@
                     <a target="sponsor" href="http://www.ijab.de/aktivitaeten/internationale-zusammenarbeit/epartizipation-youthpart/"><img alt="YouthPart" src="{{url_for('static', filename="img/youthpart2.jpg")}}"></a>
             </div>
         </div>
+	#}
     </div>
 
 {% endblock %}

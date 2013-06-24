@@ -14,14 +14,14 @@ class BarcampEditForm(BaseForm):
     """form for adding a barcamp"""
     # base data
     name                = TextField(u"Titel", [validators.Length(max=300), validators.Required()],
-                description = u'Jedes Barcamp braucht einen Titel. Beispiel: "Barcamp Aachen 2012", "JMStVCamp"',
+                description = u'Jedes Thema braucht einen Titel. Beispiel: "Juli Kurs Koeln 2013", "jkk13"',
     )
     
     description         = TextAreaField(u"Beschreibung", [validators.Required()],
-                description = u'Bitte beschreibe Dein Barcamp hier',
+                description = u'Bitte beschreibe Dein Thema hier',
     )
     slug                = TextField(u"URL-Name", [validators.Required()],
-                description = u'Dies ist der Kurzname, der in der URL auftaucht. Er darf nur Buchstaben und Zahlen sowie die Zeichen _ und - enthalten. Beispiele wären "barcamp_aachen" oder "bcac"',
+                description = u'Dies ist der Kurzname, der in der URL auftaucht. Er darf nur Buchstaben und Zahlen sowie die Zeichen _ und - enthalten. Beispiele wären "juli_kurs_koeln_2013" oder "jkk13"',
     )
     start_date          = DateField(u"Start-Datum", [], format="%d.%m.%Y")
     end_date            = DateField(u"End-Datum", [], format="%d.%m.%Y")
@@ -103,7 +103,7 @@ class EditView(BaseHandler):
                     f['location']['lng'] = result['lon']
             self.barcamp.update(f)
             self.barcamp.put()
-            self.flash("Barcamp aktualisiert", category="info")
+            self.flash("Thema aktualisiert", category="info")
             return redirect(self.url_for("barcamp", slug = self.barcamp.slug))
         return self.render(form = form)
     post = get
@@ -125,7 +125,7 @@ class ParticipantsEditView(BaseHandler):
             size = form.data['size']
             self.barcamp.size = size
             self.barcamp.put()
-            self.flash("Barcamp aktualisiert", category="info")
+            self.flash("Thema aktualisiert", category="info")
             return redirect(self.url_for("barcamp", slug = self.barcamp.slug))
         return self.render(form = form, barcamp = self.barcamp)
     post = get

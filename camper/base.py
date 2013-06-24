@@ -4,7 +4,6 @@ from starflyer import redirect, AttributeMapper
 import functools
 import wtforms
 import userbase
-from xhtml2pdf import pisa
 import werkzeug.exceptions
 from sfext.babel import T
 from sfext.uploader import AssetNotFound

@@ -35,14 +35,14 @@ class BarcampAddForm(BaseForm):
     
     # base data
     name                = TextField(u"Titel", [validators.Length(max=300), validators.Required()],
-                description = u'Jedes Barcamp braucht einen Titel. Beispiel: "Barcamp Aachen 2012", "JMStVCamp"',
+                description = u'Jedes Thema braucht einen Titel. Beispiel: "Juli Koeln Kurs 2013", "JKK2013"',
     )
     
     description         = TextAreaField(u"Beschreibung", [validators.Required()],
-                description = u'Bitte beschreibe Dein Barcamp hier',
+                description = u'Bitte beschreibe Dein Thema hier',
     )
     slug                = TextField(u"URL-Name", [validators.Required()],
-                description = u'Dies ist der Kurzname, der in der URL auftaucht. Er darf nur Buchstaben und Zahlen sowie die Zeichen _ und - enthalten. Beispiele wären "barcamp_aachen" oder "bcac"',
+                description = u'Dies ist der Kurzname, der in der URL auftaucht. Er darf nur Buchstaben und Zahlen sowie die Zeichen _ und - enthalten. Beispiele wären "juli_koeln_kurs_2013" oder "jkk2013"',
     )
     start_date          = MyDateField(u"Start-Datum", [], default=None, format="%d.%m.%Y")
     end_date            = MyDateField(u"End-Datum", [], default=None, format="%d.%m.%Y")
@@ -52,7 +52,7 @@ class BarcampAddForm(BaseForm):
     twitter             = TextField(u"Twitter-Username", [validators.Length(max=100)], description="Nur der Username, max. 100 Zeichen")
     hashtag             = TextField(u"Twitter-Hashtag", [validators.Length(max=100)], description="max. 100 Zeichen")
     gplus               = TextField(u"Google Plus URL", [validators.Length(max=100)], description="URL des Google Plus Profils")
-    homepage            = TextField(u"Homepage URL", [validators.Length(max=500)], description="optionaler Link zu Homepage oder Blog des Barcamps, wenn vorhanden.")
+    homepage            = TextField(u"Homepage URL", [validators.Length(max=500)], description="optionaler Link zu Homepage oder Blog des Themas, wenn vorhanden.")
     fbAdminId           = TextField(u"Facebook Admin-ID", [validators.Length(max=100)], description="optionale ID des Admins")
 
     location_name                = TextField(T("name of location"), [], description = T('please enter the name of the venue here'),)

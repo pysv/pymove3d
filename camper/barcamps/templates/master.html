@@ -117,7 +117,7 @@
                                 <input type="hidden" name="wf" value="public">
                                 <div class="well">
                                     <button class="pull-right btn btn-small btn-success">{{_('publish barcamp')}}</button>
-                                    <b style="color: red">{{_('this barcamp is not public')}}</b>
+                                    <b style="color: red">{{_('this theme is not public')}}</b>
                                 </div>
                             </form>
                         {% elif barcamp.workflow == "public" %}
@@ -125,7 +125,7 @@
                                 <input type="hidden" name="wf" value="registration">
                                 <div class="well">
                                     <button class="pull-right btn btn-small btn-success">{{_('open registration')}}</button>
-                                    <b style="color: red">{{_('Registration for this barcamp is not yet open. People can only subscribe to it but not take part.')}}</b>
+                                    <b style="color: red">{{_('Registration for this theme is not yet open. People can only subscribe to it but not take part.')}}</b>
                                 </div>
                             </form>
                         {% endif %}
@@ -207,7 +207,7 @@
                                 {% if view.can_add_menu_page %}
                                     <li><a href="{{url_for('barcamp_page_add', slug=slug, slot='menu')}}" class="iframebox"><i class="icon-plus"></i> Neue Seite anlegen</a></li>
                                 {% endif %}
-                                <li><a class="btn-danger" href="{{url_for("barcamps.delete", slug=slug)}}"><i class="icon icon-trash"></i> Barcamp löschen</a></li>
+                                <li><a class="btn-danger" href="{{url_for("barcamps.delete", slug=slug)}}"><i class="icon icon-trash"></i> Thema löschen</a></li>
                                 
                             </ul>
                         </div>

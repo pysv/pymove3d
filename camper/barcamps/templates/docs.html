@@ -2,13 +2,13 @@
 {% import "macros.html" as formmacros with context %}
 
 {% block main_content %}
-    <iframe name='embed_readwrite' src='http://yourpart.eu/p/{{pad}}?showControls=true&showChat=true&showLineNumbers=true&useMonospaceFont=false' 
+    <iframe name='embed_readwrite' src='http://pad.pymove3d.pysv.org/p/{{pad}}?showControls=true&showChat=true&showLineNumbers=true&useMonospaceFont=false' 
             width=789 height=600>
     </iframe>
 {% endblock %}
 {% block widgets %}
         <div class="widget">
-            <h5>{{_("Blog Posts about the camp")}}</h5>
+            <h5>{{_("Blog Posts about the Theme")}}</h5>
             <ul id="blog-reports">
                 {% for post in posts %}
                     <li>

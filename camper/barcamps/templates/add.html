@@ -3,12 +3,12 @@
 {% import "macros.html" as formmacros with context %}
 {% block content %}
     {% block title %}
-        <h1>{{_('Create a new Barcamp')}}</h1>
+        <h1>{{_('Create a new Theme')}}</h1>
     {% endblock %}
     <form class="form-validate horizontal-form validate" method="POST" action="{{url}}">  
         <fieldset>
             <legend>{{_("Base data")}}</legend>
-            {{ formmacros.form_field(form.name, class="required span8", placeholder="Barcamp-Name") }}
+            {{ formmacros.form_field(form.name, class="required span8", placeholder="Thema") }}
             {{ formmacros.form_field(form.description, class="required span8", rows=10) }}
             {% if not barcamp.public %}
                 {{ formmacros.form_field(form.slug, class="required urlscheme span4", maxlength="32", minlength="4", remote=url_for("barcamps.validate", slug = slug))}}
@@ -42,7 +42,7 @@
             {{ formmacros.form_field(form.fbAdminId, class="span4 number") }}
         </fieldset>
         {% block action %}
-            <input type="submit" class="btn btn-large btn-primary" value="{{_('create Barcamp')}}">
+            <input type="submit" class="btn btn-large btn-primary" value='Thema anlegen'}}">
         {% endblock %}
     </form>
 {% endblock %}
