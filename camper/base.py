@@ -13,7 +13,7 @@ from functools import partial
 
 from wtforms.ext.i18n.form import Form
 
-__all__ = ["BaseForm", "BaseHandler", "logged_in", "aspdf", 'ensure_barcamp', 'is_admin', 'ensure_page', 'is_main_admin', 'is_participant', 'BarcampView']
+__all__ = ["BaseForm", "BaseHandler", "logged_in", 'ensure_barcamp', 'is_admin', 'ensure_page', 'is_main_admin', 'is_participant', 'BarcampView']
 
 class UserView(object):
     """adapter for a user object to provide additional data such as profile image etc."""
@@ -253,23 +253,6 @@ class is_main_admin(object):
                 self.flash(u"Sie haben keine Berechtigung, diese Seite aufzurufen.", category="error")
                 return redirect(self.url_for("index"))
             return method(self, *args, **kwargs)
-        return wrapper
-
-
-class aspdf(object):
-    """converts a template to PDF"""
-
-    def __call__(self, method):
-
-        that = self
-
-        @functools.wraps(method)
-        def wrapper(self, *args, **kwargs):
-            html = method(self, *args, **kwargs)
-            pdf = pisa.CreatePDF(html)
-            self.response.headers['Content-Type'] = "application/pdf"
-            #self.response.headers['Content-Disposition']="attachment; filename=\"test.pdf\""
-            self.response.data = pdf.dest.getvalue()
         return wrapper
 
 

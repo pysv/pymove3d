@@ -5,7 +5,7 @@ import datetime
 from werkzeug.utils import redirect
 from starflyer import asjson
 
-from camper import BaseHandler, logged_in, db, aspdf
+from camper import BaseHandler, logged_in, db
 
 class Uploader(BaseHandler):
     """a view for creating a new transaction"""
