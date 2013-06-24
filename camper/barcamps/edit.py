@@ -103,13 +103,8 @@ class EditView(BaseHandler):
                     f['location']['lng'] = result['lon']
             self.barcamp.update(f)
             self.barcamp.put()
-<<<<<<< HEAD
             self.flash("Thema aktualisiert", category="info")
-            return redirect(self.url_for("barcamp", slug = self.barcamp.slug))
-=======
-            self.flash("Barcamp aktualisiert", category="info")
             return redirect(self.url_for("barcamps.index", slug = self.barcamp.slug))
->>>>>>> d95ac596cf2f09a7863c9ebdc503bbb8ce673602
         return self.render(form = form)
     post = get
 
