@@ -4,7 +4,7 @@
     <h1 id="logo">
         <img src="{{url_for("static", filename="/img/python-logo-master-v3-web.png")}}" alt="python - logo">
     </h1>
-    <b>Plane</b> und <b>Organisiere</b> Wettbewerbe oder Kurse rund um die Programmiersprache <a href="http://python.org"><b>Python<b></a>.
+    <b>Plane</b> und <b>Organisiere</b> Kurse rund um die Programmiersprache <a href="http://python.org"><b>Python<b></a>.
     <div class="row">
         <div class="span9">
         {% for view in barcamps %}
@@ -25,9 +25,15 @@
                         <span class="label label-success">{{_('ADMIN')}}</span>
                     {% endif %}
                 </div>
-                <div class="byline">
-                    {{view.date}}, {{view.short_location}}
-                </div>
+		{% if view.barcamp.slug == "pw13" %}
+                    <div class="byline">
+                        {{view.date}}
+                    </div>
+		{% else %}
+		    <div class="byline">
+		        {{view.date}}, {{view.short_location}}
+		    </div>
+		{% endif %}
                 <footer>
                 </footer>
             </article>
