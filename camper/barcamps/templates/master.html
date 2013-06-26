@@ -101,6 +101,8 @@
                     {% for action in actions %}
 		        {% if slug == "pw13" and not action.name == "session proposals" %}
                             <li class="{{'active' if action.active}}"><a href="{{action.url}}">{{_(action.name)}}</a></li>
+			{% else %}
+			    <li class="{{'active' if action.active}}"><a href="{{action.url}}">{{_(action.name)}}</a></li>
 			{% endif %}
                     {% endfor %}
                 </ul>
