@@ -212,16 +212,18 @@
                             </ul>
                         </div>
                         {% endif %}
-                        <div class="widget">
-                            <h4>{{_('location')}}</h4>
-                            <a href="{{url_for('barcamps.location', slug=slug)}}"><strong>{{barcamp.location.name}}</strong></a><br>
-                            {{barcamp.location.street}}<br>
-                            {{barcamp.location.zip}} {{barcamp.location.city}}<br>
-                            {% if barcamp.location.email %}<a href="mailto:{{barcamp.location.email}}">{{barcamp.location.email}}</a><br>{% endif %}
-                            {% if barcamp.location.url %}<a href="{{barcamp.location.url}}">{{barcamp.location.url}}</a><br>{% endif %}
-                            {% if barcamp.location.phone %}{{barcamp.location.phone}}<br>{% endif %}
-                            <a class="" href="{{url_for('barcamps.location', slug=slug)}}"><img src="http://staticmap.openstreetmap.de/staticmap.php?center={{barcamp.location.lat}},{{barcamp.location.lng}}&zoom=14&size=200x200&markers={{barcamp.location.lat}},{{barcamp.location.lng}},ltblu-pushpin" /></a>
-                        </div>
+			{% if not slug == "pw13" %}
+                            <div class="widget">
+                                <h4>{{_('location')}}</h4>
+                                <a href="{{url_for('barcamps.location', slug=slug)}}"><strong>{{barcamp.location.name}}</strong></a><br>
+                                {{barcamp.location.street}}<br>
+                                {{barcamp.location.zip}} {{barcamp.location.city}}<br>
+                                {% if barcamp.location.email %}<a href="mailto:{{barcamp.location.email}}">{{barcamp.location.email}}</a><br>{% endif %}
+                                {% if barcamp.location.url %}<a href="{{barcamp.location.url}}">{{barcamp.location.url}}</a><br>{% endif %}
+                                {% if barcamp.location.phone %}{{barcamp.location.phone}}<br>{% endif %}
+                                <a class="" href="{{url_for('barcamps.location', slug=slug)}}"><img src="http://staticmap.openstreetmap.de/staticmap.php?center={{barcamp.location.lat}},{{barcamp.location.lng}}&zoom=14&size=200x200&markers={{barcamp.location.lat}},{{barcamp.location.lng}},ltblu-pushpin" /></a>
+			    </div>
+			{% endif %}
                     {% endblock %}
                 </div>{# -- widget -- #}
             </div>{# -- #main-content --#}
