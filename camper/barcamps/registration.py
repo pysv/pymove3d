@@ -25,13 +25,13 @@ class BarcampSubscribe(BarcampBaseHandler):
             return redirect(self.url_for(".userlist", slug = self.barcamp.slug))
         if unicode(user._id) not in self.barcamp.subscribers:
             self.barcamp.subscribe(self.user) # we can only subscribe our own user, thus self.user and not user
-            self.flash(self._("You are now on the list of people interested in the barcamp"), category="success")
+            self.flash(self._("You are now on the list of people interested in the theme"), category="success")
         else:
             self.barcamp.unsubscribe(user) # we can remove any user if we have the permission (see above for the check)
             if user == self.user:
-                self.flash(self._("You have been removed from the list of people interested in this barcamp"), category="danger")
+                self.flash(self._("You have been removed from the list of people interested in this theme"), category="danger")
             else:
-                self.flash(self._("%(fullname)s has been removed from the list of people interested in this barcamp") %user, category="danger")
+                self.flash(self._("%(fullname)s has been removed from the list of people interested in this theme") %user, category="danger")
         return redirect(self.url_for(".userlist", slug = self.barcamp.slug))
         
 class BarcampRegister(BarcampBaseHandler):
@@ -56,7 +56,7 @@ class BarcampRegister(BarcampBaseHandler):
                     title = self.barcamp.name,
                     **self.barcamp)
         else:
-            self.flash(self._("You are now on the list of participants for this barcamp."), category="success")
+            self.flash(self._("You are now on the list of participants for this theme."), category="success")
             if uid not in event.participants:
                 event.participants.append(uid)
                 if uid in self.barcamp.subscribers:
