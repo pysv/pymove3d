@@ -24,3 +24,12 @@ class Impressum(BaseHandler):
         """render the view"""
         return self.render()
 
+class Datenschutzerklaerung(BaseHandler):
+    """show the privacy policy"""
+
+    template = "datenschutzerklaerung.html"
+
+    def get(self):
+        """render the view"""
+        return self.render()
+
