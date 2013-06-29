@@ -33,6 +33,6 @@ class DeleteConfirmView(BarcampBaseHandler):
         
         # delete barcamp
         self.barcamp.remove()
-        self.flash(self._("The barcamp and all it's contents have been deleted!"), category="success")
+        self.flash(self._("The theme and all its contents have been deleted!"), category="success")
         return redirect(self.url_for("index"))
 
