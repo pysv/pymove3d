@@ -281,12 +281,12 @@ msgstr "Du hast nicht die erforderlichen Rechte, um dies zu löschen."
 #: barcamps/registration.py:28
 #, fuzzy
 msgid "You are now on the list of people interested in the theme"
-msgstr "Du bist nun auf der Liste der Barcamp-Interessenten."
+msgstr "Du bist nun auf der Liste der Interessenten."
 
 #: barcamps/registration.py:32
 #, fuzzy
 msgid "You have been removed from the list of people interested in this theme"
-msgstr "Du wurdest erfolgreich von der Liste der Barcamp-Interessenten entfernt"
+msgstr "Du wurdest erfolgreich von der Liste der Interessenten entfernt"
 
 #: barcamps/registration.py:34
 #, fuzzy, python-format
@@ -294,7 +294,7 @@ msgid ""
 "%(fullname)s has been removed from the list of people interested in this "
 "theme"
 msgstr ""
-"%(fullname)s wurde erfolgreich von der Liste der Barcamp-Interessenten "
+"%(fullname)s wurde erfolgreich von der Liste der Interessenten "
 "entfernt."
 
 #: barcamps/registration.py:48
@@ -313,7 +313,7 @@ msgstr "Du bist nun auf der Warteliste für das %s"
 
 #: barcamps/registration.py:59
 msgid "You are now on the list of participants for this theme."
-msgstr "Du bist nun auf der Teilnehmerliste für das Barcamp"
+msgstr "Du bist nun auf der Teilnehmerliste für das Thema."
 
 #: barcamps/registration.py:65
 #, python-format
@@ -336,7 +336,7 @@ msgstr "Dein Kommentar wurde hinzugefügt."
 #: barcamps/templates/add.html:6
 #, fuzzy
 msgid "Create a new Theme"
-msgstr "neues Barcamp anlegen"
+msgstr "neues Thema anlegen"
 
 #: barcamps/templates/add.html:10
 msgid "Base data"
@@ -363,7 +363,7 @@ msgstr ""
 #: barcamps/templates/delete.html:10
 #, fuzzy
 msgid "all information about the theme"
-msgstr "Alle Informationen zu diesem Barcamp"
+msgstr "Alle Informationen zu diesem Thema"
 
 #: barcamps/templates/delete.html:11
 msgid "all your pages"
@@ -392,7 +392,7 @@ msgstr "NEEEEIN, lösche dieses Barcamp doch nicht!"
 #: barcamps/templates/docs.html:11
 #, fuzzy
 msgid "Blog Posts about the Theme"
-msgstr "Blog-Artikel über das Barcamp"
+msgstr "Blog-Artikel über das Thema"
 
 #: barcamps/templates/docs.html:16 barcamps/templates/sessions.html:31
 #: barcamps/templates/sessions.html:51 templates/master.html:41
@@ -414,12 +414,12 @@ msgstr "Speichern"
 #: barcamps/templates/master.html:128
 #, fuzzy
 msgid "publish theme"
-msgstr "Barcamp veröffentlichen"
+msgstr "Thema veröffentlichen"
 
 #: barcamps/templates/master.html:129
 #, fuzzy
 msgid "this theme is not public"
-msgstr "Dieses Barcamp ist nicht öffentlich (schade)"
+msgstr "Dieses Thema ist nicht öffentlich (schade)"
 
 #: barcamps/templates/master.html:136
 #, fuzzy
@@ -504,7 +504,7 @@ msgstr "ADMIN"
 #: templates/index.html:52
 #, fuzzy
 msgid "create new "
-msgstr "neues Barcamp anlegen"
+msgstr "neues Thema anlegen"
 
 #: templates/macros.html:63
 msgid "Diese Feld muss angegeben werden"
