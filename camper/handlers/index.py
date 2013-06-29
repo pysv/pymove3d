@@ -42,3 +42,11 @@ class Wettbewerbsbedingungen(BaseHandler):
         """render the view"""
         return self.render()
 
+class Aufgabe(BaseHandler):
+    """show the challenge"""
+
+    template = "aufgabe.html"
+
+    def get(self):
+        """render the view"""
+        return self.render()

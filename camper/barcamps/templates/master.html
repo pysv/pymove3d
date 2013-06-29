@@ -99,7 +99,7 @@
             <div class="navbar-inner">
             {% if user in barcamp.participant_users %}
                     <ul class="nav">
-                        {% for action in actions %}
+                        {% for action in actions %} 
 		            {% if slug == "pw13" %}
 			        {% if not action.name in ("session proposals", "documentation") %}
                                     <li class="{{'active' if action.active}}"><a href="{{action.url}}">{{_(action.name)}}</a></li>
@@ -107,8 +107,14 @@
 			        {% if action.name == "documentation" %}
 			            <li class="{{'active' if action.active}}"><a href="{{action.url}}">FAQ</a></li>
 			        {% endif %}
+
+                                {% if action.name == "Home" %}
+                                   <li><a target="aufgabe" href="/pw13/aufgabe">Aufgabe</a></li>
+				{% endif %}
+
 			        {% else %}
-			        <li class="{{'active' if action.active}}"><a href="{{action.url}}">{{_(action.name)}}</a></li>
+			             <li class="{{'active' if action.active}}"><a href="{{action.url}}">{{_(action.name)}}</a></li>
+
 			    {% endif %}
                         {% endfor %}
                     </ul>
