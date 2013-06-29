@@ -176,6 +176,8 @@
 
                         {{barcamp_buttons()}}
                         {% if user in barcamp.participant_users %}
+			<div class="socialmedia" id="socialshareprivacy"></div>
+                          {#
                             <div class="socialmedia">
                         
                                 <div class="fb-button">
@@ -208,6 +210,7 @@
                                 </div>
                             
                             </div>
+			    #}
   			{% endif %}
 
                         {% if is_admin or is_main_admin %}

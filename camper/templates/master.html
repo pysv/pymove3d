@@ -148,7 +148,8 @@
         <script src="{{url_for("static", filename="js/messages_de.js")}}"></script>
         <script src="{{url_for("static", filename="js/jquery.ui.min.js")}}"></script>
         <script src="{{url_for("static", filename="js/jquery.ui.datepicker-de.js")}}"></script>
-        
+        <script src="{{url_for("static", filename="js/socialshareprivacy/jquery.socialshareprivacy.js")}}"></script>
+
         <script>
             $(document).ready( function () {
                 $('.popinfo').popover();
@@ -171,8 +172,35 @@
                 $(".iframebox").colorbox({'iframe' : true, width: "60%", height: "500px"});
                 $('input.currency').autoNumeric({aSep: '', aDec: ',', aSign: '', wEmpty: 'zero'});
                 $(".numeric").numeric(false, function() { alert("Bitte nur Zahlen"); this.value = ""; this.focus(); });
-                $( ".datepicker" ).datepicker();                                                                                   
+                $( ".datepicker" ).datepicker();
+		if($("#socialshareprivacy").length > 0){
+$('#socialshareprivacy').socialSharePrivacy({
+  services : {
+    facebook : {
+      'status': 'on',
+      'txt_info': '',
+      'dummy_img'         : '/static/socialshareprivacy/images/dummy_facebook.png',
+                           
+    }, 
+    twitter : {
+        'status' : 'on',
+	'txt_info': '',
+	'dummy_img'         : '/static/socialshareprivacy/images/dummy_twitter.png',
+	                    
+    },
+    gplus : {
+      'txt_info': '',
+      'display_name' : 'Google Plus',
+      'dummy_img'    : '/static/socialshareprivacy/images/dummy_gplus.png',
+                          
+    }
+  },
+  'txt_help': '',
+  'css_path' :  "/static/socialshareprivacy/socialshareprivacy.css"
+});
+		}
             });
+	    
         </script>
         {% block js %}
         {% endblock %}
@@ -207,6 +235,5 @@
         <script src="/static/js/bootstrap-carousel.js"></script>
         <script src="/static/js/bootstrap-typeahead.js"></script>
         #}
-
     </body>
 </html>
