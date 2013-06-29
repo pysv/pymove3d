@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  0.1\n"
 "Report-Msgid-Bugs-To: cs@comlounge.net\n"
-"POT-Creation-Date: 2013-06-25 15:04+0200\n"
+"POT-Creation-Date: 2013-06-28 12:19+0200\n"
 "PO-Revision-Date: 2013-01-09 16:36+0100\n"
 "Last-Translator: Christian Scholz <cs@comlounge.net>\n"
 "Language-Team: de <LL@li.org>\n"
@@ -312,7 +312,6 @@ msgid "You are now on the waiting list for %s"
 msgstr "Du bist nun auf der Warteliste für das %s"
 
 #: barcamps/registration.py:59
-#, fuzzy
 msgid "You are now on the list of participants for this theme."
 msgstr "Du bist nun auf der Teilnehmerliste für das Barcamp"
 
@@ -412,36 +411,36 @@ msgstr "Abbrechen"
 msgid "Save"
 msgstr "Speichern"
 
-#: barcamps/templates/master.html:119
+#: barcamps/templates/master.html:128
 #, fuzzy
 msgid "publish theme"
 msgstr "Barcamp veröffentlichen"
 
-#: barcamps/templates/master.html:120
+#: barcamps/templates/master.html:129
 #, fuzzy
 msgid "this theme is not public"
 msgstr "Dieses Barcamp ist nicht öffentlich (schade)"
 
-#: barcamps/templates/master.html:127
+#: barcamps/templates/master.html:136
 #, fuzzy
 msgid "open registration"
 msgstr "Verwaltung"
 
-#: barcamps/templates/master.html:128
+#: barcamps/templates/master.html:137
 msgid ""
 "Registration for this theme is not yet open. People can only subscribe to"
 " it but not take part."
 msgstr ""
 
-#: barcamps/templates/master.html:174
+#: barcamps/templates/master.html:183
 msgid "Join us at"
 msgstr "Verfolge uns bei"
 
-#: barcamps/templates/master.html:200
+#: barcamps/templates/master.html:209
 msgid "Administration"
 msgstr "Verwaltung"
 
-#: barcamps/templates/master.html:216
+#: barcamps/templates/master.html:226
 msgid "location"
 msgstr "Veranstaltungsort"
 
@@ -489,6 +488,11 @@ msgstr "kein gültiger Wert"
 msgid "Your profile image has been deleted"
 msgstr "Dein Profilbild wurde erfolgreich gelöscht"
 
+#: pages/view.py:58
+#, fuzzy
+msgid "the page has been deleted"
+msgstr "Dein Profilbild wurde erfolgreich gelöscht"
+
 #: templates/index.html:22
 msgid "private"
 msgstr "privat"
@@ -497,7 +501,7 @@ msgstr "privat"
 msgid "ADMIN"
 msgstr "ADMIN"
 
-#: templates/index.html:46
+#: templates/index.html:52
 #, fuzzy
 msgid "create new "
 msgstr "neues Barcamp anlegen"
