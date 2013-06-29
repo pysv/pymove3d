@@ -203,6 +203,7 @@ class CamperApp(Application):
         URL('/', 'index', handlers.index.IndexView),
         URL('/impressum.html', 'impressum', handlers.index.Impressum),
 	URL('/datenschutzerklaerung.html', 'datenschutzerklaerung', handlers.index.Datenschutzerklaerung),
+	URL('/pw13/wettbewerbsbedingungen', 'wettbewerbsbedingungen', handlers.index.Wettbewerbsbedingungen),
         URL('/', 'root', handlers.index.IndexView),
         URL('/', 'login', handlers.index.IndexView),
         URL('/assets/', 'asset_upload', handlers.images.AssetUploadView),

@@ -33,3 +33,12 @@ class Datenschutzerklaerung(BaseHandler):
         """render the view"""
         return self.render()
 
+class Wettbewerbsbedingungen(BaseHandler):
+    """show the rules"""
+
+    template = "wettbewerbsbedingungen.html"
+
+    def get(self):
+        """render the view"""
+        return self.render()
+
