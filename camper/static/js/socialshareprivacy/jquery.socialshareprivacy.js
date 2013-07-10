@@ -251,7 +251,7 @@
             //
             // Der Info/Settings-Bereich wird eingebunden
             //
-            context.append('<li class="settings_info"><div class="settings_info_menu off perma_option_off"><a href="' + options.info_link + '"><span class="help_info icon"></span></a></div></li>');
+            //context.append('<li class="settings_info"><div class="settings_info_menu off perma_option_off"><a href="' + options.info_link + '"><span class="help_info icon"></span></a></div></li>');
 
             // Info-Overlays mit leichter Verzoegerung einblenden
             $('.help_info:not(.info_off)', context).live('mouseenter', function () {
