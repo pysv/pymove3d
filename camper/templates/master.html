@@ -10,11 +10,11 @@
     
         <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
         <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="/static/html5shim/html5.js"></script>
         <![endif]-->
     
         <!-- Le styles -->
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="{{url_for("static", filename="css/fonts/open+sans/Open+Sans:400italic,400,600,700,800.css")}}" rel="stylesheet" type="text/css">
         
         {% block css %}
         <link href="{{url_for("static", filename="css/main.css")}}" rel="stylesheet">
