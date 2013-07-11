@@ -97,7 +97,7 @@
         </div>
         <div class="navbar">
             <div class="navbar-inner">
-            {% if user in barcamp.participant_users %}
+            {% if is_admin or user in barcamp.participant_users %}
                     <ul class="nav">
                         {% for action in actions %} 
 		            {% if slug == "pw13" %}
