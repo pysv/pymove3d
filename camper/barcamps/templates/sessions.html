@@ -95,7 +95,7 @@
     {% if is_admin %}
         <a target="_new" href="{{url_for('.session_export', slug = slug)}}" class="pull-right btn"><i class="icon icon-download-alt"></i> Vorschläge als Excel exportieren</a>
     {% endif %}
-    {% if logged_in %}
+    {% if logged_in and is_admin%}
         <a id="new-proposal-button" href="#" class="btn btn-primary btn-info"><i class="icon icon-white icon-plus"></i> Eigenen Vorschlag erstellen</a>
         <div class="well hide" id="proposal-form-container">
             <legend>Dein Themenvorschlag</legend>
@@ -110,7 +110,8 @@
         </div>
     {% else %}
         <div class="alert alert-warning">
-            <b>Um Vorschläge zu bewerten und eigene Vorschläge einzureichen, musst Du eingeloggt sein.</b>
+            <b>Um Vorschläge zu bewerten und eigene Vorschläge einzureichen, musst Du mehr Berechtigungen haben.</b>
+				<span>{{view.date}}</span>
             <a href="{{url_for("userbase.login")}}">Hier einloggen oder registrieren</a>
         </div>
     {% endif %}
