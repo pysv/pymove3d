@@ -25,7 +25,7 @@ class PlanningPadView(BarcampBaseHandler):
     def get(self, slug = None):
         """render the view"""
         if not self.barcamp.planning_pad_public and not self.is_admin:
-            self.flash(self._(self._('You are not allowed to access this page as you are not an administrator of this barcamp.')), category="danger")
+            self.flash(self._(self._('You are not allowed to access this page as you are not an administrator of this theme.')), category="danger")
             return redirect(self.url_for(".index", slug = self.barcamp.slug))
         return self.render(
             view = self.barcamp_view,
