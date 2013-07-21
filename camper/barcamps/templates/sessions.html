@@ -27,7 +27,10 @@
                             </a>
                         </div>
                     <h4 class="media-heading">{{session.title|striptags}}</h4>
-                    {% if is_admin or user_id == session.user._id %}
+		    {#
+		    TODO fix issue with (user_id == session.user._id) 
+		    #}
+                    {% if is_admin or (user_id == session.user._id) or (user.username == session.user.username) %}
                         <a data-confirm="{{_('Are you sure?')}}" 
                            data-url="{{url_for('barcamps.session', slug=slug, sid = session._id)}}" 
                            href="#" 
@@ -79,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-                {% if is_admin or user_id == session.user._id %}
+                {% if is_admin or (user_id == session.user._id) or (user.username == session.user.username) %}
                 <form class="media-body hide edit-box form-vertical well form-validate" method="POST" action="{{url_for('.session', slug = slug, sid = session._id)}}">
                     <input type="text" class="required media-heading span6 input-big" value="{{session.title}}" name="title">
                     <textarea name="description" class="span6" rows="3">{{session.description}}</textarea>
