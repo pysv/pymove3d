@@ -56,7 +56,7 @@ class BarcampRegister(BarcampBaseHandler):
                     title = self.barcamp.name,
                     **self.barcamp)
         else:
-            self.flash(self._("You are now on the list of participants for this theme."), category="success")
+            self.flash("Du bist nun auf der Liste der Teilnehmer.", category="success")
             if uid not in event.participants:
                 event.participants.append(uid)
                 if uid in self.barcamp.subscribers:
