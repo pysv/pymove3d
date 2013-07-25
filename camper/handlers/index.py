@@ -50,3 +50,12 @@ class Aufgabe(BaseHandler):
     def get(self):
         """render the view"""
         return self.render()
+
+class Teilnehmererklaerung(BaseHandler):
+    """show Teilnehmer Erklaerung"""
+    
+    template = "teilnahmeerklaerung.html"
+    
+    def get(self):
+        """render the view"""
+	return self.render()

@@ -205,6 +205,7 @@ class CamperApp(Application):
 	URL('/datenschutzerklaerung.html', 'datenschutzerklaerung', handlers.index.Datenschutzerklaerung),
 	URL('/pw13/wettbewerbsbedingungen', 'wettbewerbsbedingungen', handlers.index.Wettbewerbsbedingungen),
 	URL('/tnb2013', 'wettbewerbsbedingungen', handlers.index.Wettbewerbsbedingungen),
+	URL('/pymove3d-teilnehmer-erklaerung', 'teilnehmererklaerung', handlers.index.Teilnehmererklaerung),
 	URL('/pw13/aufgabe', 'aufgabe', handlers.index.Aufgabe),
         URL('/', 'root', handlers.index.IndexView),
         URL('/', 'login', handlers.index.IndexView),
