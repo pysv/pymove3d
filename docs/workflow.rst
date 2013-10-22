@@ -16,7 +16,7 @@ finished -- The barcamp is over and you will see the documentation.
 cancelled -- The barcamp was cancelled.
 
 
-Implenentation
+Implementation
 ==============
 
 The above are more the conceptual states of a barcamp. Implementationwise it is not just a string which changes 
